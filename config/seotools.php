@@ -3,6 +3,7 @@
  * @see https://github.com/artesaos/seotools
  */
 
+
 return [
     'meta' => [
         /*
@@ -21,7 +22,7 @@ return [
          * Webmaster tags are always added.
          */
         'webmaster_tags' => [
-            'google'    => null,
+            'google'    => 'a.sjdngkjasdkngknsangsndngadgdsags',
             'bing'      => null,
             'alexa'     => null,
             'pinterest' => null,

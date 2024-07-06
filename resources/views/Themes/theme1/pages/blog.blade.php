@@ -46,9 +46,7 @@
                         <div class="widget rounded">
                             <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
                                 <img src="images/logo.svg" alt="logo" class="mb-4" />
-                                <p class="mb-4 bd-font">প্লিজ বস, আপনার ধোনের পানি ফেলে দিচ্ছি আমি, তাও আমার ক্ষতি করেন না
-                                    আপনি।
-                                    যেভাবে বলবেন সেভাবেই আপনার পানি বের করে দিচ্ছি
+                                <p class="mb-4 bd-font">jjhfkdjghkfj hbjghdfsirhkjhfg hjhgjgjh
                                 </p>
                             </div>
                         </div>
@@ -135,6 +133,9 @@
                                         <div class="card bd-card p-1 position-relative shadow-sm rounded bd-font">
                                             <div class="card-body">
                                                 <div class="row">
+                                                    <div class="col">
+                                                        <img src="{{asset('dashboards/Theme1/images/config_pics/logo/1720078756.png')}}">
+                                                    </div>
                                                     <div class="col">
                                                         <a href="{{ route('blog.view', $blog->slug) }}">
                                                             <h5 class="fw-bolder" style="color: #C60B0D !important;">

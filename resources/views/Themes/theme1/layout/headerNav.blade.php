@@ -10,7 +10,7 @@
                  <!-- menus -->
                  <ul class="navbar-nav mr-auto" style="font-family: 'Anek Bangla';font-weight: 800">
                      <li class="nav-item dropdown">
-                         <a class="nav-link dropdown-toggle" href="#">গল্প</a>
+                         <a class="nav-link dropdown-toggle" href="">ব্লগ</a>
                          <ul class="dropdown-menu">
                              @foreach ($categories as $category)
                                  <li><a class="dropdown-item"

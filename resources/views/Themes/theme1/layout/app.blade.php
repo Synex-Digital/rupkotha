@@ -109,7 +109,7 @@
         <nav>
             <ul class="vertical-menu">
                 <li class="active">
-                    <a href="#">গল্প</a>
+                    <a href="#">ব্লগ</a>
                     <ul class="submenu">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item"

@@ -66,7 +66,7 @@
             </div>
 
             <!-- Contact Form -->
-            <form id="contact-form" class="contact-form" method="post">
+            <form id="contact-form" class="contact-form">
 
                 <div class="messages"></div>
 

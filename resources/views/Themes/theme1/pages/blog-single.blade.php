@@ -141,9 +141,7 @@
                         <div class="widget rounded">
                             <div class="widget-about data-bg-image text-center"
                                 data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
-                                <p class="mb-4 bd-font">প্লিজ বস, আপনার ধোনের পানি ফেলে দিচ্ছি আমি, তাও আমার ক্ষতি করেন না
-                                    আপনি।
-                                    যেভাবে বলবেন সেভাবেই আপনার পানি বের করে দিচ্ছি
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
                                 </p>
                             </div>
                         </div>

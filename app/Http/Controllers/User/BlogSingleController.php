@@ -128,4 +128,24 @@ class BlogSingleController extends Controller
             return back();
         }
     }
+
+    public function blogs(){
+        $category = Category::where('status', 'active')->get();
+
+        //getting most view alltime blog
+        $best = Blog::orderBy('view_count', 'desc')->take(4)->get();
+
+        //Recent
+        $recent = Blog::orderBy('id', 'desc')->take(4)->get();
+
+        //category product
+        $categoryBlog = Blog::where('status', 'active')->paginate(12);
+
+        return view('Themes.theme1.pages.blog',[
+            'blogs'     => $categoryBlog,
+            'recent'    => $recent,
+            'bests'     => $best,
+            'cats'      => $category,
+        ]);
+    }
 }
