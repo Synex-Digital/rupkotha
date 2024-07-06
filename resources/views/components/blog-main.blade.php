@@ -4,6 +4,9 @@
         href="{{ route('blog.view', $blog->slug) }}">Read</a>
     <div class="card-body">
         <div class="row">
+            <img src="{{asset($blog->image)}}">
+        </div>
+        <div class="row">
             <div class="col">
                 <a href="{{ route('blog.view', $blog->slug) }}">
                     <h5 class="fw-bolder bd-font">{{ $blog->title }}</h5>

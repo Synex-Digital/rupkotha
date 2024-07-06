@@ -21,20 +21,17 @@
                     <!-- featured post large -->
                     <div class="post featured-post-lg">
                         <div class="details clearfix">
-                            <a href="#" class="category-badge bd-font">সারপ্রাইজ</a>
-                            <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a href="#">নিশোর
-                                    সারপ্রাইজ দ্বিতীয় পর্ব বউকে
-                                    ন্যাংটো দিলাম পর্ব ১</a>
+                            <a href="{{route('category.view',$banner->category->slug)}}" class="category-badge bd-font">{{$banner->category->name}}</a>
+                            <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a href="{{route('blog.view',$banner->slug)}}">{{$banner->title}}</a>
                             </h2>
                             <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="#">Katen Doe</a></li>
-                                <li class="list-inline-item">29 March 2021</li>
+                                <li class="list-inline-item"><a href="#">{{$banner->author}}</a></li>
+                                <li class="list-inline-item">{{$banner->gettingDate()}}</li>
                             </ul>
                         </div>
                         <a href="#">
                             <div class="thumb rounded">
-                                <div class="inner data-bg-image"
-                                    data-bg-image="{{ asset('Themes/Theme1/images/posts/featured-lg.jpg') }}"></div>
+                                <div class="inner data-bg-image" data-bg-image="{{ asset($banner->image) }}" alt="{{$banner->title}}"></div>
                             </div>
                         </a>
                     </div>
@@ -151,8 +148,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                            <h5 class="fw-bolder bd-font" style="color: #C60B0D !important;">
-                                                {{ $blog->title }}</h5>
+                                           <a href="{{route('blog.view',$blog->slug)}}"> <h5 class="fw-bolder bd-font" style="color: #C60B0D !important;">
+                                                {{ $blog->title }}</h5></a>
                                             <p class="text-secondary mt-3">
                                                 {{ $blog->seo_description }}
                                             </p>
@@ -165,7 +162,7 @@
                                         <div class="col-6 fw-bolder" style="text-align: end">
                                             <p class="text-secondary"><span style="padding-right: 3px"><img
                                                         src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
-                                                        alt=""></span>156 view</p>
+                                                        alt="eyebig"></span>156 view</p>
                                         </div>
                                     </div>
                                 </div>
@@ -180,7 +177,7 @@
                         <h3 class="section-title bd-font">নতুন</h3>
                         <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                         <div class="slick-arrows-top">
-                            <a href="#" class="btn btn-sm btn-default">View all</a>
+                            <a href="{{route('blog.all')}}" class="btn btn-sm btn-default">View all</a>
                         </div>
                     </div>
 
@@ -198,11 +195,9 @@
                     <div class="sidebar">
                         <!-- widget about -->
                         <div class="widget rounded">
-                            <div class="widget-about data-bg-image text-center"
-                                data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
-                                <p class="mb-4 bd-font">প্লিজ বস, আপনার ধোনের পানি ফেলে দিচ্ছি আমি, তাও আমার ক্ষতি করেন না
-                                    আপনি।
-                                    যেভাবে বলবেন সেভাবেই আপনার পানি বের করে দিচ্ছি
+                            <div class="widget-about data-bg-image text-center" data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}" alt="map-bg">
+
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
                                 </p>
                                 <ul class="social-icons list-unstyled list-inline mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -274,7 +269,7 @@
                         <!-- widget post carousel -->
                         <div class="widget rounded">
                             <div class="widget-header text-center">
-                                <h3 class="widget-title">Celebration</h3>
+                                <h3 class="widget-title">উদযাপন</h3>
                                 <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
@@ -322,7 +317,7 @@
 
                         <!-- widget advertisement -->
                         <div class="widget no-container rounded text-md-center">
-                            <span class="ads-title">- Sponsored Ad -</span>
+                            <span class="ads-title">- স্পনসর করা বিজ্ঞাপন -</span>
                             <a href="#" class="widget-ads">
                                 <img src="{{ asset('themes/Theme1/images/wave.svg') }}" alt="Advertisement" />
                             </a>

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', [UserHomeController::class, 'index'])->name('home');
 Route::get('/view/{id}', [BlogSingleController::class, 'index'])->name('blog.view');
+Route::get('/blogs', [BlogSingleController::class, 'blogs'])->name('blog.all');
 Route::get('/categories/{slugs}', [UserHomeController::class, 'category'])->name('category.view');
 Route::get('/view', [UserHomeController::class, 'blog'])->name('blog.font');
 Route::get('/about', [SiteController::class, 'about'])->name('about');
