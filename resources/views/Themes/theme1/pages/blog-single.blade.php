@@ -139,8 +139,8 @@
                     <div class="sidebar">
                         <!-- widget about -->
                         <div class="widget rounded">
-                            <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
-                                <img src="images/logo.svg" alt="logo" class="mb-4" />
+                            <div class="widget-about data-bg-image text-center"
+                                data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
                                 <p class="mb-4 bd-font">প্লিজ বস, আপনার ধোনের পানি ফেলে দিচ্ছি আমি, তাও আমার ক্ষতি করেন না
                                     আপনি।
                                     যেভাবে বলবেন সেভাবেই আপনার পানি বের করে দিচ্ছি

@@ -702,7 +702,7 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
 }
 .navbar-nav .nav-link {
   padding: 0.439rem 1rem;
-  color: #79889e;
+  color: #293856de;
 }
 .navbar-nav .nav-link:hover {
   color: #203656;
@@ -2220,6 +2220,10 @@ footer .footer-inner .copyright {
   position: absolute;
 }
 
+div#search_content {
+    height: 500px;
+    overflow-y: scroll;
+}
 /*=================================================================*/
 /*                      HELPER
 /*=================================================================*/

@@ -10,9 +10,9 @@
                  <!-- social icons -->
                  <div class="col-md-4 text-center">
                      <ul class="social-icons list-unstyled list-inline mb-0">
-                         <li class="list-inline-item"><a href="#">About</a></li>
-                         <li class="list-inline-item"><a href="#">Contact</a></li>
-                         <li class="list-inline-item"><a href="#">Privacy</a></li>
+                         <li class="list-inline-item"><a href="{{ route('about') }}">About</a></li>
+                         <li class="list-inline-item"><a href="{{ route('contact') }}">Contact</a></li>
+                         <li class="list-inline-item"><a href="{{ route('privacy') }}">Privacy</a></li>
                      </ul>
                  </div>
 

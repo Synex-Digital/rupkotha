@@ -9,7 +9,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    {{-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> --}}
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
     {!! Twitter::generate() !!}
@@ -59,8 +60,8 @@
         <!-- close button -->
         <button type="button" class="btn-close" aria-label="Close"></button>
         <!-- content -->
-        <div class="search-content">
-            <div class="text-center">
+        <div class="container">
+            <div class="text-center mt-5">
                 <h3 class="mb-4 mt-0">Press ESC to close</h3>
             </div>
             <!-- form -->
@@ -71,14 +72,6 @@
             </form>
 
             <div class="container mt-3" id="search_content">
-                <!-- post -->
-                <div class="post post-list-sm circle" style="border-bottom: 1px solid #cbcbcb">
-                    <h6 class="my-0 bd-font fw-bolder"><a href="" style="color: #203656">অল্প বয়স থেকেই আমার
-                            ব্যবসা করার ইচ্ছা</a></h6>
-                    <ul class="meta list-inline mt-1 mb-0">
-                        <li class="list-inline-item">12 Jun 24</li>
-                    </ul>
-                </div>
 
             </div>
         </div>
@@ -116,7 +109,7 @@
         <nav>
             <ul class="vertical-menu">
                 <li class="active">
-                    <a href="#">চটি গল্প</a>
+                    <a href="#">গল্প</a>
                     <ul class="submenu">
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item"
@@ -126,7 +119,18 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Share Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('about') }}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('privacy') }}">Privacy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                </li>
                 </li>
             </ul>
         </nav>
@@ -150,6 +154,8 @@
 
             let x = $('.live-search').on('input', function() {
                 var query = $(this).val();
+                const container = document.getElementById('search_content');
+                container.innerHTML = '';
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -162,7 +168,39 @@
                         search: query,
                     },
                     success: function(response) {
-                        console.log(response);
+                        response.data.forEach(post => {
+                            // Create the row element
+                            const rowElement = document.createElement('div');
+                            rowElement.className = 'row mb-3';
+
+                            // Create the title element
+                            const titleElement = document.createElement('h6');
+                            titleElement.className = 'my-0 bd-font fw-bolder';
+                            const titleLink = document.createElement('a');
+                            titleLink.href = `/post/${post.slug}`;
+                            titleLink.textContent = post.title;
+                            titleLink.style.color = '#203656';
+                            titleElement.appendChild(titleLink);
+
+                            // Create the meta element
+                            const metaElement = document.createElement('ul');
+                            metaElement.className = 'meta list-inline mt-1 mb-0';
+                            const dateItem = document.createElement('li');
+                            dateItem.className = 'list-inline-item';
+                            dateItem.textContent = new Date(post.created_at)
+                                .toLocaleDateString('bn-BD', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                });
+                            metaElement.appendChild(dateItem);
+
+                            // Append the title and meta to the row element
+                            rowElement.appendChild(titleElement);
+                            rowElement.appendChild(metaElement);
+                            // Append the row element to the container
+                            container.appendChild(rowElement);
+                        });
                     },
                     error: function(xhr, status, error) {
                         console.log(xhr.responseText);

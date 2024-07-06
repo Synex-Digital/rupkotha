@@ -33,7 +33,8 @@
                         </div>
                         <a href="#">
                             <div class="thumb rounded">
-                                <div class="inner data-bg-image" data-bg-image="images/posts/featured-lg.jpg"></div>
+                                <div class="inner data-bg-image"
+                                    data-bg-image="{{ asset('Themes/Theme1/images/posts/featured-lg.jpg') }}"></div>
                             </div>
                         </a>
                     </div>
@@ -147,9 +148,6 @@
                         @foreach ($recent as $blog)
                             {{-- item --}}
                             <div class="card bd-card p-1 position-relative shadow-sm rounded bd-font">
-                                {{-- <a style="bottom: -16px; width:160px;"
-                                class="btn btn-default shadow text-white position-absolute start-50 translate-middle-x rounded-5"
-                                href="#">Read</a> --}}
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
@@ -200,8 +198,8 @@
                     <div class="sidebar">
                         <!-- widget about -->
                         <div class="widget rounded">
-                            <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
-                                <img src="images/logo.svg" alt="logo" class="mb-4" />
+                            <div class="widget-about data-bg-image text-center"
+                                data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
                                 <p class="mb-4 bd-font">প্লিজ বস, আপনার ধোনের পানি ফেলে দিচ্ছি আমি, তাও আমার ক্ষতি করেন না
                                     আপনি।
                                     যেভাবে বলবেন সেভাবেই আপনার পানি বের করে দিচ্ছি
@@ -264,7 +262,7 @@
                                 <form>
                                     <div class="mb-2">
                                         <input class="form-control w-100 text-center" placeholder="Email address…"
-                                            type="email">
+                                            type="email" aria-label="Descriptive Name" name="email">
                                     </div>
                                     <button class="btn btn-default btn-full" type="submit">Sign Up</button>
                                 </form>

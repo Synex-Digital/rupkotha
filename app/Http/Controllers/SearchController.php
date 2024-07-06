@@ -13,10 +13,11 @@ class SearchController extends Controller
         $results = Blog::select('id', 'title', 'created_at', 'slug')->where(function ($query) use ($searchTerm) {
             $query->where('title', 'like', '%' . $searchTerm . '%')
                 ->orWhere('seo_tags', 'like', '%' . $searchTerm . '%');
-        })->take(12)
+        })->take(10)
             ->get();
         return response()->json([
-            's' => $results,
+            'status'    => 1,
+            'data'      => $results,
         ]);
     }
 }
