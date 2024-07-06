@@ -21,17 +21,22 @@
                     <!-- featured post large -->
                     <div class="post featured-post-lg">
                         <div class="details clearfix">
-                            <a href="{{route('category.view',$banner->category->slug)}}" class="category-badge bd-font">{{$banner->category->name}}</a>
-                            <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a href="{{route('blog.view',$banner->slug)}}">{{$banner->title}}</a>
+                            @if ($banner->category)
+                                <a href="{{ route('category.view', $banner->category->slug) }}"
+                                    class="category-badge bd-font">{{ $banner->category->name }}</a>
+                            @endif
+                            <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a
+                                    href="{{ route('blog.view', $banner->slug) }}">{{ $banner->title }}</a>
                             </h2>
                             <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="#">{{$banner->author}}</a></li>
-                                <li class="list-inline-item">{{$banner->gettingDate()}}</li>
+                                <li class="list-inline-item"><a href="#">{{ $banner->author }}</a></li>
+                                <li class="list-inline-item">{{ $banner->gettingDate() }}</li>
                             </ul>
                         </div>
                         <a href="#">
                             <div class="thumb rounded">
-                                <div class="inner data-bg-image" data-bg-image="{{ asset($banner->image) }}" alt="{{$banner->title}}"></div>
+                                <div class="inner data-bg-image" data-bg-image="{{ asset($banner->image) }}"
+                                    alt="{{ $banner->title }}"></div>
                             </div>
                         </a>
                     </div>
@@ -148,8 +153,10 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col">
-                                           <a href="{{route('blog.view',$blog->slug)}}"> <h5 class="fw-bolder bd-font" style="color: #C60B0D !important;">
-                                                {{ $blog->title }}</h5></a>
+                                            <a href="{{ route('blog.view', $blog->slug) }}">
+                                                <h5 class="fw-bolder bd-font" style="color: #C60B0D !important;">
+                                                    {{ $blog->title }}</h5>
+                                            </a>
                                             <p class="text-secondary mt-3">
                                                 {{ $blog->seo_description }}
                                             </p>
@@ -177,7 +184,7 @@
                         <h3 class="section-title bd-font">নতুন</h3>
                         <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                         <div class="slick-arrows-top">
-                            <a href="{{route('blog.all')}}" class="btn btn-sm btn-default">View all</a>
+                            <a href="{{ route('blog.all') }}" class="btn btn-sm btn-default">View all</a>
                         </div>
                     </div>
 
@@ -195,9 +202,11 @@
                     <div class="sidebar">
                         <!-- widget about -->
                         <div class="widget rounded">
-                            <div class="widget-about data-bg-image text-center" data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}" alt="map-bg">
+                            <div class="widget-about data-bg-image text-center"
+                                data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}" alt="map-bg">
 
-                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন
+                                    আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
                                 </p>
                                 <ul class="social-icons list-unstyled list-inline mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a>
