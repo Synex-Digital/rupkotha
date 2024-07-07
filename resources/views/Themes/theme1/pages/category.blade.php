@@ -49,7 +49,8 @@
                         <div class="widget rounded">
                             <div class="widget-about data-bg-image text-center"
                                 data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
-                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয়
+                                    করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
                                 </p>
                             </div>
                         </div>
@@ -58,7 +59,7 @@
                         <div class="widget rounded bd-font">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">বিভাগ</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <ul class="list">
@@ -76,7 +77,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title bd-font">চিরকাল বিখ্যাত</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 @foreach ($bests as $key => $best)
@@ -107,7 +108,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title bd-font">সংযুক্ত থাকুন</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <span class="newsletter-headline text-center mb-3">Join ৭০,০০০ subscribers!</span>
@@ -127,7 +128,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">Celebration</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <div class="post-carousel-widget">
@@ -176,7 +177,7 @@
                         <div class="widget no-container rounded text-md-center">
                             <span class="ads-title">- Sponsored Ad -</span>
                             <a href="#" class="widget-ads">
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" alt="Advertisement" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" alt="Advertisement" />
                             </a>
                         </div>
 

@@ -93,7 +93,7 @@
                     <!-- section header -->
                     <div class="section-header">
                         <h3 class="section-title bd-font">জনপ্রিয়</h3>
-                        <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                        <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                     </div>
 
                     <div class="row gy-5">
@@ -137,7 +137,7 @@
                     <!-- section header -->
                     <div class="section-header">
                         <h3 class="section-title bd-font">অনুপ্রেরণা</h3>
-                        <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                        <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                         <div class="slick-arrows-top">
                             <button type="button" data-role="none" class="carousel-topNav-prev slick-custom-buttons"
                                 aria-label="Previous"><i class="icon-arrow-left"></i></button>
@@ -228,7 +228,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title bd-font">চিরকাল বিখ্যাত</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 @foreach ($bests as $key => $blog)
@@ -241,7 +241,7 @@
                         <div class="widget rounded bd-font">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title bd-font">বিভাগ</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <ul class="list">
@@ -259,7 +259,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title bd-font">সংযুক্ত থাকুন</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <span class="newsletter-headline text-center mb-3">Join ৭০,০০০ subscribers!</span>
@@ -279,7 +279,7 @@
                         <div class="widget rounded">
                             <div class="widget-header text-center">
                                 <h3 class="widget-title">উদযাপন</h3>
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave" />
                             </div>
                             <div class="widget-content">
                                 <div class="post-carousel-widget">
@@ -328,7 +328,7 @@
                         <div class="widget no-container rounded text-md-center">
                             <span class="ads-title">- স্পনসর করা বিজ্ঞাপন -</span>
                             <a href="#" class="widget-ads">
-                                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" alt="Advertisement" />
+                                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" alt="Advertisement" />
                             </a>
                         </div>
 

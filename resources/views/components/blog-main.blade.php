@@ -4,7 +4,7 @@
         href="{{ route('blog.view', $blog->slug) }}">Read</a>
     <div class="card-body">
         <div class="row">
-            <img src="{{asset($blog->image)}}">
+            <img src="{{ asset($blog->image) }}">
         </div>
         <div class="row">
             <div class="col">

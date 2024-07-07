@@ -62,7 +62,7 @@
             <!-- section header -->
             <div class="section-header">
                 <h3 class="section-title">Send Message</h3>
-                <img src="{{ asset('themes/Theme1/images/wave.svg') }}" class="wave" alt="wave">
+                <img src="{{ asset('Themes/Theme1/images/wave.svg') }}" class="wave" alt="wave">
             </div>
 
             <!-- Contact Form -->
