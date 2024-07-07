@@ -17,30 +17,28 @@
             <div class="row gy-4">
 
                 <div class="col-lg-8">
-
-                    <!-- featured post large -->
-                    <div class="post featured-post-lg">
-                        <div class="details clearfix">
-                            @if ($banner->category)
+                    @if ($banner)
+                        <!-- featured post large -->
+                        <div class="post featured-post-lg">
+                            <div class="details clearfix">
                                 <a href="{{ route('category.view', $banner->category->slug) }}"
                                     class="category-badge bd-font">{{ $banner->category->name }}</a>
-                            @endif
-                            <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a
-                                    href="{{ route('blog.view', $banner->slug) }}">{{ $banner->title }}</a>
-                            </h2>
-                            <ul class="meta list-inline mb-0">
-                                <li class="list-inline-item"><a href="#">{{ $banner->author }}</a></li>
-                                <li class="list-inline-item">{{ $banner->gettingDate() }}</li>
-                            </ul>
-                        </div>
-                        <a href="#">
-                            <div class="thumb rounded">
-                                <div class="inner data-bg-image" data-bg-image="{{ asset($banner->image) }}"
-                                    alt="{{ $banner->title }}"></div>
+                                <h2 class="post-title bd-font" style="letter-spacing: 2px;"><a
+                                        href="{{ route('blog.view', $banner->slug) }}">{{ $banner->title }}</a>
+                                </h2>
+                                <ul class="meta list-inline mb-0">
+                                    <li class="list-inline-item"><a href="#">{{ $banner->author }}</a></li>
+                                    <li class="list-inline-item">{{ $banner->gettingDate() }}</li>
+                                </ul>
                             </div>
-                        </a>
-                    </div>
-
+                            <a href="#">
+                                <div class="thumb rounded">
+                                    <div class="inner data-bg-image" data-bg-image="{{ asset($banner->image) }}"
+                                        alt="{{ $banner->title }}"></div>
+                                </div>
+                            </a>
+                        </div>
+                    @endif
                 </div>
 
                 <div class="col-lg-4">
