@@ -154,7 +154,7 @@
                                                         <p class="text-secondary"
                                                             style="display: flex;justify-content: flex-end;"><img
                                                                 src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
-                                                                alt="">156 view</p>
+                                                                alt="">{{ $blog->view_count }} view</p>
                                                     </div>
                                                 </div>
                                             </div>

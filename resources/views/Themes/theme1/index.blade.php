@@ -165,9 +165,9 @@
                                             by <span class="text-uppercase fw-bolder">{{ $blog->author }}</span>
                                         </div>
                                         <div class="col-6 fw-bolder" style="text-align: end">
-                                            <p class="text-secondary"><span style="padding-right: 3px"><img
-                                                        src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
-                                                        alt="eyebig"></span>156 view</p>
+                                            <p class="text-secondary" style="display: flex;justify-content: flex-end;">
+                                                <img src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
+                                                    alt="">{{ $blog->view_count }} view</p>
                                         </div>
                                     </div>
                                 </div>
@@ -203,8 +203,11 @@
                             <div class="widget-about data-bg-image text-center"
                                 data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}" alt="map-bg">
 
-                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন
-                                    আয় করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট রূপকথা কি?
+                                    ওয়েবসাইট রূপকথা থেকে কেমন আয় করা যায়?
+
+                                    মানুষ ম্যানেজমেন্ট ওয়েবসাইট রূপকথা কি?
+                                    ওয়েবসাইট রূপকথা থেকে কেমন আয় করা যায়?
                                 </p>
                                 <ul class="social-icons list-unstyled list-inline mb-0">
                                     <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -303,7 +306,7 @@
                                                         <p class="text-secondary"
                                                             style="display: flex;justify-content: flex-end;"><img
                                                                 src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
-                                                                alt="">156 view</p>
+                                                                alt="">{{ $blog->view_count }} view</p>
                                                     </div>
                                                 </div>
                                             </div>
