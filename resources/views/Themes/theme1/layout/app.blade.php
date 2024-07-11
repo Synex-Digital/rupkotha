@@ -177,7 +177,7 @@
                             const titleElement = document.createElement('h6');
                             titleElement.className = 'my-0 bd-font fw-bolder';
                             const titleLink = document.createElement('a');
-                            titleLink.href = `/post/${post.slug}`;
+                            titleLink.href = `/view/${post.slug}`;
                             titleLink.textContent = post.title;
                             titleLink.style.color = '#203656';
                             titleElement.appendChild(titleLink);
