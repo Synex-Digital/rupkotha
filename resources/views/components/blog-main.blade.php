@@ -12,13 +12,13 @@
                     <h5 class="fw-bolder bd-font">{{ $blog->title }}</h5>
                 </a>
                 <p class="text-secondary mt-3">
-                    {{ $blog->seo_description }}
+                    {{ $blog->description() }}
                 </p>
             </div>
         </div>
         <div class="row" style="font-size: 13px">
             <div class="col-6 text-secondary">
-                by <span class="text-uppercase fw-bolder">khaalifa</span>
+                by <span class="text-uppercase fw-bolder">{{ $blog->author }}</span>
             </div>
             <div class="col-6 fw-bolder" style="text-align: end">
                 <p class="text-secondary"><span style="padding-right: 3px"><img

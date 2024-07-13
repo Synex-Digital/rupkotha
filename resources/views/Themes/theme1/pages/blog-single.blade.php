@@ -234,7 +234,7 @@
                                                             <h5 class="fw-bolder" style="color: #C60B0D !important;">
                                                                 {{ $blog->title }}</h5>
                                                         </a>
-                                                        <p class="text-secondary mt-3">{{ $blog->seo_description }}</p>
+                                                        <p class="text-secondary mt-3">{{ $blog->description() }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row" style="font-size: 13px">

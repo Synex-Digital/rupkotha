@@ -31,4 +31,13 @@ class Blog extends Model
     {
         return $this->created_at->format('d M y');
     }
+
+    public function description()
+    {
+        $text = $this->seo_description;
+        if (strlen($text) >= 100) {
+            $text = substr($text, 0, 100) . ' ...';
+        }
+        return $text;
+    }
 }
