@@ -40,7 +40,6 @@ class CategoryController extends Controller
             'seo_title'         => 'required',
             'seo_description'   => 'required',
             'seo_tags'          => 'required',
-            'image'             => 'required|image|mimes:jpeg,png,jpg,webp,jfif|max:2048',
         ]);
 
         $category                   = new Category();
@@ -49,9 +48,15 @@ class CategoryController extends Controller
         $category->seo_title        = $request->seo_title;
         $category->seo_description  = $request->seo_description;
         $category->seo_tags         = $request->seo_tags;
-        $category->image            = Self::upload($request);
+        if ($request->has('image')) {
+            $category->image            = Self::upload($request);
+        }
         $category->status           = $request->status;
-        $category->slug             = Str::slug($request->name, '-');
+        if ($category->slug = null) {
+            $category->slug             = Str::slug($request->name, '-');
+        } else {
+            $category->slug             = $request->slug;
+        }
         $category->save();
         return back()->with('success', 'Category created successfully');
     }
@@ -83,13 +88,14 @@ class CategoryController extends Controller
 
         $request->validate([
             'name' => 'required',
+            'slug' => 'required',
         ]);
         $category->name             = $request->name;
         $category->seo_title        = $request->seo_title;
         $category->seo_description  = $request->seo_description;
         $category->seo_tags         = $request->seo_tags;
         $category->status           = $request->status;
-        $category->slug             = Str::slug($request->name, '-');
+        $category->slug             = $request->slug;
         $oldImage                   = $category->image;
 
         if (file_exists($oldImage)) {
@@ -99,8 +105,8 @@ class CategoryController extends Controller
         if ($request->has('image')) {
             $category->image = self::upload($request);
         }
-        $category           ->save();
-        return back()       ->with('success', 'Category updated successfully');
+        $category->save();
+        return back()->with('success', 'Category updated successfully');
     }
 
     /**
@@ -109,12 +115,13 @@ class CategoryController extends Controller
     public function destroy(string $id)
     {
         $category           = Category::find($id);
-        $category           ->delete();
-        return back()       ->with('danger', 'Category deleted!!');
+        $category->delete();
+        return back()->with('danger', 'Category deleted!!');
     }
 
-    static function upload($request){
-        $imageName ='dashboards/Theme1/images/category/' . time() . '.' . $request->image->extension();
+    static function upload($request)
+    {
+        $imageName = 'dashboards/Theme1/images/category/' . time() . '.' . $request->image->extension();
         $request->image->move(public_path('dashboards/Theme1/images/category'), $imageName);
         return $imageName;
     }

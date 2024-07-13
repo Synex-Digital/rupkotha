@@ -3,7 +3,8 @@
     <div class="thumb circle">
         <a href="{{ route('blog.view', $blog->slug) }}">
             <div class="inner">
-                <img loading="lazy" decoding="async" width="60" height="60" src="{{ asset($blog->image)}}" class="attachment-katen-thumb-circle size-katen-thumb-circle wp-post-image" alt="" sizes="(max-width: 60px) 100vw, 60px">
+                <img loading="lazy" decoding="async" width="60" height="60" src="{{ asset($blog->image) }}"
+                    class="inner-image" alt="" sizes="(max-width: 60px) 100vw, 60px">
                 {{-- <span class="inner-text bd-font">{{ $key }}</span> --}}
             </div>
         </a>

@@ -70,7 +70,9 @@
                                 </div>
 
                                 <div class="mb-3 col-md-6">
-                                    <label for="formFile" class="form-label">Image </label>
+                                    <label for="formFile" class="form-label">Image <span
+                                            style="font-size: 12px;font-style: italic">width-110px / height-80px</span>
+                                    </label>
                                     <input class="form-control @error('image') is-invalid @enderror" type="file"
                                         id="formFile" name="image" value="{{ old('image') }}">
                                     @error('image')

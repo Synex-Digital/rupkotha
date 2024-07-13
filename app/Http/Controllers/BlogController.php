@@ -117,7 +117,7 @@ class BlogController extends Controller
             'seo_title'         => 'required',
             'seo_description'   => 'required',
             'seo_tags'          => 'required',
-            'slug'              => 'required|min:3|max:255|unique:blogs',
+            // 'slug'              => 'required|min:3|max:255|unique:blogs',
         ]);
 
         $blog->category_id      = $request->category_id;
@@ -130,13 +130,14 @@ class BlogController extends Controller
         $blog->status           = $request->status;
         $blog->slug             = Str::slug($request->title, '-');
 
-        $oldImage = $blog->image;
-        if (file_exists($oldImage)) {
-            unlink($oldImage);
-            File::delete($oldImage);
-        }
 
         if ($request->has('image')) {
+            $oldImage = $blog->image;
+            if (file_exists($oldImage)) {
+                unlink($oldImage);
+                File::delete($oldImage);
+            }
+
             $blog->image = Self::upload($request);
         }
         $blog->save();

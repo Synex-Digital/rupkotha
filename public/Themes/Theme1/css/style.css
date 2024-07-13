@@ -632,6 +632,10 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
     font-size: 40px;
 }
 
+.inner-image{
+    width: 100%;
+    height: 100%;
+}
 .header-personal .header-top {
   padding-top: 30px;
   padding-bottom: 30px;
