@@ -8,17 +8,24 @@
 @endphp
 @extends('Themes.theme1.layout.app')
 @section('content')
+    <section class="page-header">
+        <div class="container-xl">
+            <div class="text-center">
+                <h1 class="mt-0 mb-2 bd-font">বিভাগ</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li> <span
+                            style="padding:0 6px ">/</span>
+                        <li class="breadcrumb-item active" aria-current="page">বিভাগ</li><span
+                            class="breadcrumb-breaker">/</span>
+                        <li class="breadcrumb-items active" aria-current="page">{{ $cat->name }}</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
     <section class="main-content mt-3">
         <div class="container-xl">
-
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-items"><a href="#">Home</a></li><span class="breadcrumb-breaker">/</span>
-                    <li class="breadcrumb-items"><a href="#">Category</a></li><span class="breadcrumb-breaker">/</span>
-                    <li class="breadcrumb-items active" aria-current="page">{{ $cat->name }}</li>
-                </ol>
-            </nav>
-
             <div class="row gy-4">
                 <div class="col-lg-8">
                     <div class="row gy-4">

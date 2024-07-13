@@ -10,13 +10,15 @@
 @endphp
 @extends('Themes.theme1.layout.app')
 @section('content')
+
     <section class="main-content mt-3">
         <div class="container-xl">
 
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-items"><a href="#">Home</a></li><span class="breadcrumb-breaker">/</span>
-                    <li class="breadcrumb-items"><a href="#">Inspiration</a></li><span
+                    <li class="breadcrumb-items"><a href="{{ route('home') }}">Home</a></li><span
+                        class="breadcrumb-breaker">/</span>
+                    <li class="breadcrumb-items"><a href="{{ route('blog.all') }}">Blog</a></li><span
                         class="breadcrumb-breaker">/</span>
                     <li class="breadcrumb-items active" aria-current="page">{{ $blog->title }}</li>
                 </ol>
@@ -141,7 +143,8 @@
                         <div class="widget rounded">
                             <div class="widget-about data-bg-image text-center"
                                 data-bg-image="{{ asset('Themes/Theme1/images/map-bg.png') }}">
-                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয়
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন
+                                    আয়
                                     করা যায় মানুষ ম্যানেজমেন্ট ওয়েবসাইট ফ্লিপিং কি?ওয়েবসাইট ফ্লিপিং থেকে কেমন আয় করা যায়
                                 </p>
                             </div>

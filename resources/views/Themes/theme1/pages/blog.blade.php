@@ -8,15 +8,22 @@
 @endphp
 @extends('Themes.theme1.layout.app')
 @section('content')
+    <section class="page-header">
+        <div class="container-xl">
+            <div class="text-center">
+                <h1 class="mt-0 mb-2 bd-font">ব্লগ</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li> <span
+                            style="padding:0 6px ">/</span>
+                        <li class="breadcrumb-item active" aria-current="page">ব্লগ</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
     <section class="main-content mt-3">
         <div class="container-xl">
-
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-items"><a href="#">Home</a></li><span class="breadcrumb-breaker">/</span>
-                    <li class="breadcrumb-items"><a href="#">Blog</a></li><span class="breadcrumb-breaker">/</span>
-                </ol>
-            </nav>
 
             <div class="row gy-4">
                 <div class="col-lg-8">
@@ -45,8 +52,9 @@
                         <!-- widget about -->
                         <div class="widget rounded">
                             <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
-                                <img src="images/logo.svg" alt="logo" class="mb-4" />
-                                <p class="mb-4 bd-font">jjhfkdjghkfj hbjghdfsirhkjhfg hjhgjgjh
+                                <p class="mb-4 bd-font">মানুষ ম্যানেজমেন্ট ওয়েবসাইট রূপকথা কি? ওয়েবসাইট রূপকথা থেকে কেমন
+                                    আয় করা যায়? মানুষ ম্যানেজমেন্ট ওয়েবসাইট রূপকথা কি? ওয়েবসাইট রূপকথা থেকে কেমন আয় করা
+                                    যায়?
                                 </p>
                             </div>
                         </div>
@@ -128,15 +136,10 @@
                             </div>
                             <div class="widget-content">
                                 <div class="post-carousel-widget">
-                                    <!-- post -->
                                     @foreach ($recent as $blog)
                                         <div class="card bd-card p-1 position-relative shadow-sm rounded bd-font">
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col">
-                                                        <img
-                                                            src="{{ asset('dashboards/Theme1/images/config_pics/logo/1720078756.png') }}">
-                                                    </div>
                                                     <div class="col">
                                                         <a href="{{ route('blog.view', $blog->slug) }}">
                                                             <h5 class="fw-bolder" style="color: #C60B0D !important;">
@@ -154,7 +157,7 @@
                                                         <p class="text-secondary"
                                                             style="display: flex;justify-content: flex-end;"><img
                                                                 src="{{ asset('Themes/Theme1/images/eyebig.svg') }}"
-                                                                alt="">156 view</p>
+                                                                alt="">{{ $blog->view_count }} view</p>
                                                     </div>
                                                 </div>
                                             </div>
