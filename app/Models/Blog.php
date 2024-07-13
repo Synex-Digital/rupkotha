@@ -35,9 +35,18 @@ class Blog extends Model
     public function description()
     {
         $text = $this->seo_description;
-        if (strlen($text) >= 100) {
-            $text = substr($text, 0, 100) . ' ...';
+
+        // Ensure the text is UTF-8 encoded
+        $text = mb_convert_encoding($text, 'UTF-8', 'auto');
+
+        if (mb_strlen($text) > 90) {
+            $text = mb_substr($text, 0, 90);
+            $lastSpace = mb_strrpos($text, ' ');
+            if ($lastSpace !== false) {
+                $text = mb_substr($text, 0, $lastSpace) . '...';
+            }
         }
+
         return $text;
     }
 }
