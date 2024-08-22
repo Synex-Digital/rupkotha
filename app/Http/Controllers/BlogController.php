@@ -117,7 +117,7 @@ class BlogController extends Controller
             'seo_title'         => 'required',
             'seo_description'   => 'required',
             'seo_tags'          => 'required',
-            // 'slug'              => 'required|min:3|max:255|unique:blogs',
+            'slug'              => 'required',
         ]);
 
         $blog->category_id      = $request->category_id;
@@ -128,7 +128,7 @@ class BlogController extends Controller
         $blog->seo_description  = $request->seo_description;
         $blog->seo_tags         = $request->seo_tags;
         $blog->status           = $request->status;
-        $blog->slug             = Str::slug($request->title, '-');
+        $blog->slug             = $request->slug != null ? $request->slug : Str::slug($request->title, '-');
 
 
         if ($request->has('image')) {
